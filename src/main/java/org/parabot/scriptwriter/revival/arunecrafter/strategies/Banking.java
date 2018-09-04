@@ -48,6 +48,9 @@ public class Banking implements Strategy {
                 }, 3000);
                 if(Inventory.isFull()) {
                     Bank.close();
+                } else {
+                    Logger.addMessage("-------- Last rune essence withdrawn, stopping script --------");
+                    Core.stopScript();
                 }
             }
         } else {
